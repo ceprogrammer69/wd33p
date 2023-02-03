@@ -10,6 +10,13 @@ for (let id in cart) {
 
     let tr = document.createElement('tr')
 
+    let image_td = document.createElement('td');
+    let image = document.createElement('img');
+    image.src = item.image;
+    image.alt = item.title;
+    image_td.appendChild(image);
+    tr.appendChild(image_td);
+
     let title_td = document.createElement('td')
     title_td.textContent = item.title
     tr.appendChild(title_td)

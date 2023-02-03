@@ -30,6 +30,7 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 function add(event) {
+    let image = event.target.dataset.image;
     let price = Number(event.target.dataset.price);
     let title = event.target.dataset.title;
     let id = event.target.dataset.id;
@@ -40,7 +41,8 @@ if (id in cart) {
     let cartItem = {
         title: title,
         price: price,
-        qty: 1
+        qty: 1,
+        image: image
     };
     cart[id] = cartItem
 }
